@@ -49,7 +49,7 @@ function App() {
         createdAt: serverTimestamp(),
       });
       setMessage("");
-      divForscroll.current.scrollIntoView({ behavior: 'smooth' });
+      divForscroll.current.scrollIntoView({ behavior: 'auto' });
     } catch (error) {
       alert(error);
     }
@@ -84,11 +84,12 @@ function App() {
   };
 
   return (
-    <Box bg={"red.50"}>
+    <Box bg={"grey"} >
       {user ? (
-        <Container bg={"white"} h={"100vh"}>
+        <Container borderRadius={"30"} bg={"white"} paddingY={"2"} h={"100vh"}>
           <VStack h={"full"} paddingY={4}>
-            <Button onClick={logouthandle} colorScheme="red" w={"full"}>
+            <img src="https://static.vecteezy.com/system/resources/previews/020/945/959/original/chat-app-logo-png.png"width={100} height={100}/>
+            <Button onClick={logouthandle} colorScheme="red" paddingX={'10'} paddingY={'6'}>
               Logout
             </Button>
             <VStack h={"full"} w={"full"} overflow={"auto"} css={{"&::-webkit-scrollbar":{
